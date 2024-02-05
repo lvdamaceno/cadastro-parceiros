@@ -1,113 +1,631 @@
-import Image from "next/image";
+// import { Horse, Heart, Cube } from '@phosphor-icons/react';
+import { Scroll } from '@phosphor-icons/react/dist/ssr';
 
-export default function Home() {
+export default function Page() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
+    <div className="questions max-w-3xl my-5 p-5">
+      <form action="" className="flex flex-col gap-5 ">
+        {/* Step 1 */}
+        <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5">
+          <h1>DADOS INICIAIS</h1>
+          {/* Gênero */}
+          <div className="question">
+            <h2>
+              Gênero: <span className="text-red-500">*</span>
+            </h2>
+            <div className="options flex gap-5">
+              <div className="flex gap-1">
+                <input type="radio" name="sexo" id="masculino" required />
+                <label htmlFor="masculino">Masculino</label>
+              </div>
+              <div className="flex gap-1">
+                <input type="radio" name="sexo" id="feminino" />
+                <label htmlFor="feminino">Feminino</label>
+              </div>
+              <div className="flex gap-1">
+                <input type="radio" name="sexo" id="outros" />
+                <label htmlFor="outros">Outros</label>
+              </div>
+            </div>
+          </div>
+          {/* Ajudante */}
+          <div className="question">
+            <h2>
+              Tem ajudante? <span className="text-red-500">*</span>
+            </h2>
+            <div className="options flex gap-5">
+              <div className="flex gap-1">
+                <input type="radio" name="ajudante" id="sim" required />
+                <label htmlFor="sim">Sim</label>
+              </div>
+              <div className="flex gap-1">
+                <input type="radio" name="ajudante" id="nao" />
+                <label htmlFor="nao">Não</label>
+              </div>
+            </div>
+          </div>
+          {/* Documentos */}
+          <div className="question">
+            <h2>
+              OBRIGATÓRIO. Antes de começar o seu credenciamento, providencie as
+              fotos dos seguintes documentos abaixo para serem anexados:{' '}
+              <span className="text-red-500">*</span>
+            </h2>
+
+            <ul className="list-disc ml-10">
+              <li>Foto sua atual;</li>
+              <li>Foto segurando o documento (RH/CNH) ao lado do rosto;</li>
+              <li>Foto do RG com o CPF (frente e verso);</li>
+              <li>
+                Foto da folha da carteira profissional que comprove sua profisão
+                e
+              </li>
+              <li>Foto do comprovante de residência.</li>
+            </ul>
+
+            <div className="flex gap-1">
+              <input type="radio" name="documentos" id="documentos" required />
+              <label htmlFor="documentos">
+                Sim! Já tenho todos os itens acima
+              </label>
+            </div>
+          </div>
+          {/* Vínculo */}
+          <div className="question">
+            <h2>
+              Você é? <span className="text-red-500">*</span>
+            </h2>
+            <div className="options flex gap-5">
+              <div className="flex gap-1">
+                <input type="radio" name="vinculo" id="mei" required />
+                <label htmlFor="mei">MEI - Micro Empreendedor Individual</label>
+              </div>
+              <div className="flex gap-1">
+                <input type="radio" name="vinculo" id="freelancer" />
+                <label htmlFor="freelancer">
+                  FREELANCER - Profissional Autônomo
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Step 2 */}
+        <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5">
+          {/* Nome */}
+          <h1>IDENTIFICAÇÃO</h1>
+          <div className="question">
+            <h2>
+              Seu nome <span className="text-red-500">*</span>
+            </h2>
+            <div className="flex justify-between gap-5">
+              <input
+                type="text"
+                name="nome"
+                id="nome"
+                placeholder="Informe seu nome"
+                required
+              />
+              <input
+                type="text"
+                name="sobrenome"
+                id="sobrenome"
+                placeholder="Informe seu sobrenome"
+              />
+            </div>
+          </div>
+          {/* CNPJ */}
+          <div className="question">
+            <h2>
+              CNPJ <span className="text-red-500">*</span>
+            </h2>
+            <div className="flex justify-between">
+              <input
+                type="number"
+                name="cnpj"
+                id="cnpj"
+                placeholder="00.000.000/0000-00"
+                required
+              />
+            </div>
+          </div>
+          {/* Razão Social */}
+          <div className="question">
+            <h2>
+              Razão Social <span className="text-red-500">*</span>
+            </h2>
+            <div className="flex justify-between">
+              <input
+                type="text"
+                name="razao-social"
+                id="razao-social"
+                placeholder="Informe sua Razão Social"
+                required
+              />
+            </div>
+          </div>
+          {/* CPF */}
+          <div className="question">
+            <h2>
+              CPF <span className="text-red-500">*</span>
+            </h2>
+            <div className="flex justify-between">
+              <input
+                type="number"
+                name="cpf"
+                id="cpf"
+                placeholder="000.000.000-00"
+                required
+              />
+            </div>
+          </div>
+          {/* RG */}
+          <div className="question">
+            <h2>
+              RG <span className="text-red-500">*</span>
+            </h2>
+            <div className="flex justify-between">
+              <input
+                type="number"
+                name="rg"
+                id="rg"
+                placeholder="00000000000"
+                required
+              />
+            </div>
+          </div>
+          {/* Nascimento */}
+          <div className="question">
+            <h2>
+              Data de nascimento <span className="text-red-500">*</span>
+            </h2>
+            <div className="flex justify-between">
+              <input
+                type="date"
+                name="dt-nascimento"
+                id="dt-nascimento"
+                placeholder="00/00/0000"
+                required
+              />
+            </div>
+          </div>
+          {/* Nome da Mãe */}
+          <div className="question">
+            <h2>
+              Nome da mãe completo <span className="text-red-500">*</span>
+            </h2>
+            <div className="flex justify-between">
+              <input
+                type="text"
+                name="nome-mae"
+                id="nome-mae"
+                placeholder="Informe o nome da sua mãe completo"
+                required
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Step 3 */}
+        <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5">
+          <h1>DADOS PARA CONTATO</h1>
+          {/* Endereço */}
+          <div className="question">
+            <h2>
+              Endereço <span className="text-red-500">*</span>
+            </h2>
+            <div className="flex justify-between">
+              <input
+                type="text"
+                name="endereco-principal"
+                id="endereco-principal"
+                placeholder="Endereço principal"
+                required
+              />
+            </div>
+            <div className="flex justify-between">
+              <input
+                type="text"
+                name="endereco-secundário"
+                id="endereco-secundário"
+                placeholder="Endereço secundário"
+              />
+            </div>
+            <div className="flex justify-between gap-5">
+              <input
+                type="text"
+                name="cidade"
+                id="cidade"
+                placeholder="Cidade"
+                required
+              />
+              <input
+                type="text"
+                name="estado"
+                id="estado"
+                placeholder="Estado"
+                required
+              />
+            </div>
+            <div className="flex justify-between gap-5">
+              <input
+                type="text"
+                name="cep"
+                id="cep"
+                placeholder="CEP"
+                required
+              />
+              <input
+                type="text"
+                name="pais"
+                id="pais"
+                placeholder="País"
+                required
+              />
+            </div>
+          </div>
+          {/* Email */}
+          <div className="question">
+            <h2>
+              Email <span className="text-red-500">*</span>
+            </h2>
+            <div className="flex justify-between">
+              <input
+                type="mail"
+                name="mail"
+                id="mail"
+                placeholder="Informe o seu email de contato"
+                required
+              />
+            </div>
+            <div className="flex justify-between">
+              <input
+                type="text"
+                name="endereco-secundário"
+                id="endereco-secundário"
+                placeholder="Endereço secundário"
+              />
+            </div>
+          </div>
+          {/* Telefones */}
+          <div className="question">
+            <h2>
+              Telefones <span className="text-red-500">*</span>
+            </h2>
+            <div className="flex justify-between">
+              <input
+                type="number"
+                name="telefone-principal"
+                id="telefone-principal"
+                placeholder="Informe o seu contato principal (apenas números)"
+                required
+              />
+            </div>
+            <div className="flex justify-between">
+              <input
+                type="number"
+                name="telefone-secundario"
+                id="telefone-secundario"
+                placeholder="Informe o seu contato secundario (apenas números)"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Step 4 */}
+        <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5">
+          {/* Selfie */}
+          <h1>ENVIO DE DOCUMENTOS</h1>
+          <div className="question">
+            <h2>
+              Envie uma foto sua atual <span className="text-red-500">*</span>
+            </h2>
+            <input
+              className="bg-zinc-100"
+              type="file"
+              id="selfie"
+              name="selfie"
+              accept="image/*"
             />
-          </a>
-        </div>
-      </div>
+          </div>
+          {/* Foto com RG */}
+          <div className="question">
+            <h2>
+              Envie uma foto segurando o documento (RG/CNH) ao lado do rosto{' '}
+              <span className="text-red-500">*</span>
+            </h2>
+            <input
+              className="bg-zinc-100"
+              type="file"
+              id="selfie-documento"
+              name="selfie-documento"
+              accept="image/*"
+            />
+          </div>
+          {/* Foto do Ajudante */}
+          <div className="question">
+            <h2>Envie uma foto atual do seu ajudante (opcional)</h2>
+            <input
+              className="bg-zinc-100"
+              type="file"
+              id="selfie-ajudante"
+              name="selfie-ajudante"
+              accept="image/*"
+            />
+          </div>
+          {/* Foto do comprovante de trabalho */}
+          <div className="question">
+            <h2>
+              Envie uma foto folha da carteira profissional que comprove sua
+              profissão <span className="text-red-500">*</span>
+            </h2>
+            <input
+              className="bg-zinc-100"
+              type="file"
+              id="comprovante-trabalho"
+              name="comprovante-trabalho"
+              accept="image/*"
+            />
+          </div>
+          {/* Foto do RG/CPF */}
+          <div className="question">
+            <h2>
+              Envie uma foto do seu RG com CPF{' '}
+              <span className="text-red-500">*</span>
+            </h2>
+            <input
+              className="bg-zinc-100"
+              type="file"
+              id="foto-rg-cpf"
+              name="foto-rg-cpf"
+              accept="image/*"
+            />
+          </div>
+          {/* Foto do comprovante de residencia */}
+          <div className="question">
+            <h2>
+              Envie uma foto do seu comprovante de residência{' '}
+              <span className="text-red-500">*</span>
+            </h2>
+            <input
+              className="bg-zinc-100"
+              type="file"
+              id="comprovante-residencia"
+              name="comprovante-residencia"
+              accept="image/*"
+            />
+          </div>
+          {/* Foto do certificado MEI */}
+          <div className="question">
+            <h2>Certificado MEI (Caso tenha)</h2>
+            <input
+              className="bg-zinc-100"
+              type="file"
+              id="certificado-mei"
+              name="certificado-mei"
+              accept="image/*"
+            />
+          </div>
+        </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+        {/* Step 5 */}
+        <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5">
+          <h1>EXPERIÊNCIA PROFISSIONAL</h1>
+          {/* Meio de transporte */}
+          <div className="question">
+            <h2>
+              Qual meio de transporte você utiliza para ir ao cliente?{' '}
+              <span className="text-red-500">*</span>
+            </h2>
+            <fieldset>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  id="onibus"
+                  name="meio-transporte"
+                  required
+                />
+                <label htmlFor="onibus">Ônibus</label>
+              </div>
+              <div className="flex gap-1">
+                <input type="checkbox" id="moto" name="meio-transporte" />
+                <label htmlFor="moto">Moto</label>
+              </div>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  id="bicicleta-motorizada"
+                  name="meio-transporte"
+                />
+                <label htmlFor="bicicleta-motorizada">
+                  Bicicleta motorizada
+                </label>
+              </div>
+              <div className="flex gap-1">
+                <input type="checkbox" id="carro" name="meio-transporte" />
+                <label htmlFor="carro">Carro</label>
+              </div>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  id="bicicleta-comum"
+                  name="meio-transporte"
+                />
+                <label htmlFor="bicicleta-comum">Bicicleta comum</label>
+              </div>
+            </fieldset>
+          </div>
+          <div className="question">
+            <h2>
+              Qual tipo de móvel você sabe montar?{' '}
+              <span className="text-red-500">*</span>
+            </h2>
+            <fieldset>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  id="planejato"
+                  name="moveis-conhecidos"
+                  required
+                />
+                <label htmlFor="planejato">Planejado (Necessita recorte)</label>
+              </div>
+              <div className="flex gap-1">
+                <input type="checkbox" id="modulado" name="moveis-conhecidos" />
+                <label htmlFor="modulado">Modulado</label>
+              </div>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  id="convencional"
+                  name="moveis-conhecidos"
+                />
+                <label htmlFor="convencional">Convencional</label>
+              </div>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  id="moveis-escritorio"
+                  name="moveis-conhecidos"
+                />
+                <label htmlFor="moveis-escritorio">Móveis de escritório</label>
+              </div>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  id="estofados"
+                  name="moveis-conhecidos"
+                />
+                <label htmlFor="estofados">Estofados</label>
+              </div>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+              <div className="flex gap-1">
+                <input type="checkbox" id="chaveiro" name="moveis-conhecidos" />
+                <label htmlFor="chaveiro">Chaveiro</label>
+              </div>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  id="higienizacao"
+                  name="moveis-conhecidos"
+                />
+                <label htmlFor="higienizacao">Higienização</label>
+              </div>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  id="reparos-estofado-colchao"
+                  name="moveis-conhecidos"
+                />
+                <label htmlFor="reparos-estofado-colchao">
+                  Reparos e Concertos (Estofados e Colchões)
+                </label>
+              </div>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  id="reparos-moveis"
+                  name="moveis-conhecidos"
+                />
+                <label htmlFor="reparos-moveis">
+                  Reparos e Concertos (Móveis)
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div className="question">
+            <h2>
+              Quais cidades você atende? <span className="text-red-500">*</span>
+            </h2>
+            <input
+              type="number"
+              name="cidades-atendidas"
+              id="cncidades-atendidaspj"
+              placeholder="Informe as cidades separando por vírgula"
+              required
+            />
+          </div>
+          <div className="question">
+            <h2>
+              Atende em quais bairros? (ou todos){' '}
+              <span className="text-red-500">*</span>
+            </h2>
+            <input
+              type="number"
+              name="cidades-atendidas"
+              id="cidades-atendidas"
+              placeholder="Informe os bairros separando por vírgula"
+              required
+            />
+          </div>
+        </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        {/* Step 6 */}
+        <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5">
+          <h1>DADOS BANCÁRIOS</h1>
+          <div className="question">
+            <h2>Conta bancária</h2>
+            <fieldset>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  id="conta-corrente"
+                  name="dados-bancarios"
+                  required
+                />
+                <label htmlFor="conta-corrente">
+                  Tenho conta corrente/poupança em meu nome
+                </label>
+              </div>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  id="chave-pix"
+                  name="dados-bancarios"
+                  required
+                />
+                <label htmlFor="chave-pix">Tenho chave pix</label>
+              </div>
+              <div className="flex gap-1">
+                <input
+                  type="checkbox"
+                  id="chave-pix-terceiro"
+                  name="dados-bancarios"
+                  required
+                />
+                <label htmlFor="chave-pix-terceiro">
+                  Tenho chave pix em nome de terceiros
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <h1>LEIA COM ATENÇÃO NOSSO CONTRATO DE PRESTÇÃO DE SERVIÇO</h1>
+          <div className="question">
+            <a
+              href=""
+              className="mb-4 flex justify-center items-center align-middle border-2 border-solid border-red-400 rounded-lg bg-red-300 hover:bg-red-400"
+            >
+              <Scroll size={64} />
+              <p>VISUALIZAR CONTRATO</p>
+            </a>
+            <fieldset>
+              <div className="flex gap-1">
+                <input type="checkbox" id="contrato" name="contrato" required />
+                <label htmlFor="contrato">
+                  Eu li e aceito os termos e condições deste contrato
+                </label>
+              </div>
+            </fieldset>
+          </div>
+        </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        {/* Enviar */}
+        <section className="flex justify-end">
+          <button className="p-3 border-2 border-red-400 rounded-lg bg-red-300 hover:bg-red-400">
+            Finalizar credenciamento
+          </button>
+        </section>
+      </form>
+    </div>
   );
 }
