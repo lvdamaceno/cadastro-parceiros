@@ -11,6 +11,7 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://cadastro-parceiros.vercel.app'),
   title: 'Seja um parceiro UltraLog',
   description: 'Página de cadastro de parceiros da Ultralog',
   openGraph: {
