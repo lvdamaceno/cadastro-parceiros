@@ -660,6 +660,7 @@ export default function Page() {
           Direitos Reservados
         </h2>
       </div>
+      <p className="hidden">made by @lvdamaceno</p>
     </div>
   );
 }
