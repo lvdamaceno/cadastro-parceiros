@@ -29,9 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <Head>
+      <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-      </Head>
+      </head>
       <body className={roboto.className}>
         {children} <Analytics />
       </body>
