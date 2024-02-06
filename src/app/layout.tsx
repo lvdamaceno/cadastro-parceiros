@@ -16,10 +16,10 @@ export const metadata: Metadata = {
   description: 'Página de cadastro de parceiros da Ultralog',
   openGraph: {
     siteName: 'Cadastro de Parceiros Ultralog',
-    images: '/logo.png',
+    images: '/src/app/logo.png',
   },
   icons: {
-    icon: '/logo.png',
+    icon: '/src/app/logo.png',
   },
 };
 
