@@ -701,7 +701,7 @@ export default function Page() {
                     penColor="black"
                     canvasProps={{
                       width: 300,
-                      height: 200,
+                      height: 150,
                       className: 'sigCanvas',
                     }}
                   />
