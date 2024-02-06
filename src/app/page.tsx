@@ -1,13 +1,14 @@
 'use client';
 
+import React from 'react';
+
 import { EmbedPDF } from '@simplepdf/react-embed-pdf';
 
 import { Files, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
 import Image from 'next/image';
 import logo from '/src/app/assets/logo.png';
 
-import React from 'react';
-
+import ReactDOM from 'react-dom';
 import SignatureCanvas from 'react-signature-canvas';
 
 export default function Page() {
@@ -696,14 +697,14 @@ export default function Page() {
                   Assine digitalmente no quadro abaixo
                 </h2>
                 <div className="border-2 border-orange-400 rounded-lg  bg-orange-300 flex justify-center items-center">
-                  <SignatureCanvas
+                  {/* <SignatureCanvas
                     penColor="black"
                     canvasProps={{
-                      width: 550,
+                      width: 400,
                       height: 200,
                       className: 'sigCanvas',
                     }}
-                  />
+                  /> */}
                 </div>
               </div>
             </div>
