@@ -6,6 +6,10 @@ import { Files, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
 import Image from 'next/image';
 import logo from '/src/app/assets/logo.png';
 
+import React from 'react';
+
+import SignatureCanvas from 'react-signature-canvas';
+
 export default function Page() {
   return (
     <div className="questions w-full bg-gradient-to-b from-[#f85014] to-[#fb923c]">
@@ -670,7 +674,7 @@ export default function Page() {
                   className="mb-4 flex justify-center items-center align-middle border-2 border-solid border-orange-400 rounded-lg bg-orange-300 hover:bg-orange-400 font-bold"
                 >
                   <Files size={64} weight="light" />
-                  VISUALIZAR CONTRATO
+                  VISUALIZAR CONTRATO E POLÍTICA DE DADOS
                 </a>
               </EmbedPDF>
               <fieldset>
@@ -682,10 +686,26 @@ export default function Page() {
                     required
                   />
                   <label htmlFor="contrato">
-                    Eu li e aceito os termos e condições deste contrato
+                    Eu li e aceito os termos e condições deste contrato e a
+                    política de uso de dados segundo a LGPD.
                   </label>
                 </div>
               </fieldset>
+              <div className="question">
+                <h2 className="font-bold mt-3">
+                  Assine digitalmente no quadro abaixo
+                </h2>
+                <div className="border-2 border-orange-400 rounded-lg  bg-orange-300 flex justify-center items-center">
+                  <SignatureCanvas
+                    penColor="black"
+                    canvasProps={{
+                      width: 760,
+                      height: 200,
+                      className: 'sigCanvas',
+                    }}
+                  />
+                </div>
+              </div>
             </div>
           </section>
 
