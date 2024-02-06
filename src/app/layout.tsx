@@ -14,6 +14,13 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: 'Seja um parceiro UltraLog',
   description: 'Página de cadastro de parceiros da Ultralog',
+  openGraph: {
+    siteName: 'Cadastro de Parceiros Ultralog',
+    images: '/logo.png',
+  },
+  icons: {
+    icon: '/logo.png',
+  },
 };
 
 export default function RootLayout({
