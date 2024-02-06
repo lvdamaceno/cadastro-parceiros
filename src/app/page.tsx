@@ -1,22 +1,30 @@
-import { Scroll, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
+'use client';
+
+import { EmbedPDF } from '@simplepdf/react-embed-pdf';
+
+import { Files, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
 import Image from 'next/image';
-import logo from '/src/app/logo.png';
+import logo from '/src/app/assets/logo.png';
 
 export default function Page() {
   return (
-    <div className="questions w-full mt-5">
+    <div className="questions w-full bg-gradient-to-b from-[#f85014] to-[#fb923c]">
       <div className="topbar flex flex-col place-items-center justify-center w-full">
         <Image src={logo} alt="Logotipo da Ultralog" height={96} />
-        <h1>ULTRALOG - CADASTRO P/ PARCEIROS DE MONTAGEM</h1>
+        <h1 className="underline text-center text-2xl font-bold">
+          ULTRALOG - CADASTRO P/ PARCEIROS DE MONTAGEM
+        </h1>
       </div>
       <div className="max-w-3xl p-5 flex m-auto">
         <form action="" className="flex flex-col gap-5 ">
           {/* Step 1 */}
           <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5 bg-zinc-100">
-            <h1>DADOS INICIAIS</h1>
+            <h1 className="underline text-center text-2xl font-bold">
+              DADOS INICIAIS
+            </h1>
             {/* Gênero */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Gênero: <span className="text-red-500">*</span>
               </h2>
               <div className="options flex gap-5">
@@ -36,7 +44,7 @@ export default function Page() {
             </div>
             {/* Ajudante */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Tem ajudante? <span className="text-red-500">*</span>
               </h2>
               <div className="options flex gap-5">
@@ -52,7 +60,7 @@ export default function Page() {
             </div>
             {/* Documentos */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 OBRIGATÓRIO. Antes de começar o seu credenciamento, providencie
                 as fotos dos seguintes documentos abaixo para serem anexados:{' '}
                 <span className="text-red-500">*</span>
@@ -83,7 +91,7 @@ export default function Page() {
             </div>
             {/* Vínculo */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Você é? <span className="text-red-500">*</span>
               </h2>
               <div className="options flex gap-5">
@@ -106,14 +114,17 @@ export default function Page() {
           {/* Step 2 */}
           <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100">
             {/* Nome */}
-            <h1>IDENTIFICAÇÃO</h1>
+            <h1 className="underline text-center text-2xl font-bold">
+              IDENTIFICAÇÃO
+            </h1>
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Seu nome <span className="text-red-500">*</span>
               </h2>
               <div className="flex justify-between gap-5">
                 <input
                   type="text"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="nome"
                   id="nome"
                   placeholder="Informe seu nome"
@@ -121,6 +132,7 @@ export default function Page() {
                 />
                 <input
                   type="text"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="sobrenome"
                   id="sobrenome"
                   placeholder="Informe seu sobrenome"
@@ -130,12 +142,13 @@ export default function Page() {
             </div>
             {/* CNPJ */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 CNPJ <span className="text-red-500">*</span>
               </h2>
               <div className="flex justify-between">
                 <input
                   type="number"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="cnpj"
                   id="cnpj"
                   placeholder="00.000.000/0000-00"
@@ -145,12 +158,13 @@ export default function Page() {
             </div>
             {/* Razão Social */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Razão Social <span className="text-red-500">*</span>
               </h2>
               <div className="flex justify-between">
                 <input
                   type="text"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="razao-social"
                   id="razao-social"
                   placeholder="Informe sua Razão Social"
@@ -160,12 +174,13 @@ export default function Page() {
             </div>
             {/* CPF */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 CPF <span className="text-red-500">*</span>
               </h2>
               <div className="flex justify-between">
                 <input
                   type="number"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="cpf"
                   id="cpf"
                   placeholder="000.000.000-00"
@@ -175,12 +190,13 @@ export default function Page() {
             </div>
             {/* RG */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 RG <span className="text-red-500">*</span>
               </h2>
               <div className="flex justify-between">
                 <input
                   type="number"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="rg"
                   id="rg"
                   placeholder="00000000000"
@@ -190,11 +206,12 @@ export default function Page() {
             </div>
             {/* Nascimento */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Data de nascimento <span className="text-red-500">*</span>
               </h2>
               <div className="flex justify-between">
                 <input
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   type="date"
                   name="dt-nascimento"
                   id="dt-nascimento"
@@ -205,12 +222,13 @@ export default function Page() {
             </div>
             {/* Nome da Mãe */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Nome da mãe completo <span className="text-red-500">*</span>
               </h2>
               <div className="flex justify-between">
                 <input
                   type="text"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="nome-mae"
                   id="nome-mae"
                   placeholder="Informe o nome da sua mãe completo"
@@ -222,15 +240,18 @@ export default function Page() {
 
           {/* Step 3 */}
           <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100">
-            <h1>DADOS PARA CONTATO</h1>
+            <h1 className="underline text-center text-2xl font-bold">
+              DADOS PARA CONTATO
+            </h1>
             {/* Endereço */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Endereço <span className="text-red-500">*</span>
               </h2>
               <div className="flex justify-between">
                 <input
                   type="text"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="endereco-principal"
                   id="endereco-principal"
                   placeholder="Endereço principal"
@@ -240,6 +261,7 @@ export default function Page() {
               <div className="flex justify-between">
                 <input
                   type="text"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="endereco-secundário"
                   id="endereco-secundário"
                   placeholder="Endereço secundário"
@@ -248,6 +270,7 @@ export default function Page() {
               <div className="flex justify-between gap-5">
                 <input
                   type="text"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="cidade"
                   id="cidade"
                   placeholder="Cidade"
@@ -255,6 +278,7 @@ export default function Page() {
                 />
                 <input
                   type="text"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="estado"
                   id="estado"
                   placeholder="Estado"
@@ -264,6 +288,7 @@ export default function Page() {
               <div className="flex justify-between gap-5">
                 <input
                   type="number"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="cep"
                   id="cep"
                   placeholder="CEP"
@@ -271,6 +296,7 @@ export default function Page() {
                 />
                 <input
                   type="text"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="pais"
                   id="pais"
                   placeholder="País"
@@ -280,11 +306,12 @@ export default function Page() {
             </div>
             {/* Email */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Email <span className="text-red-500">*</span>
               </h2>
               <div className="flex justify-between">
                 <input
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   type="mail"
                   name="mail"
                   id="mail"
@@ -295,12 +322,13 @@ export default function Page() {
             </div>
             {/* Telefones */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Telefones <span className="text-red-500">*</span>
               </h2>
               <div className="flex justify-between">
                 <input
                   type="number"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="telefone-principal"
                   id="telefone-principal"
                   placeholder="Informe o seu contato principal (apenas números)"
@@ -310,6 +338,7 @@ export default function Page() {
               <div className="flex justify-between">
                 <input
                   type="number"
+                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                   name="telefone-secundario"
                   id="telefone-secundario"
                   placeholder="Informe o seu contato secundario (apenas números)"
@@ -321,13 +350,15 @@ export default function Page() {
           {/* Step 4 */}
           <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100">
             {/* Selfie */}
-            <h1>ENVIO DE DOCUMENTOS</h1>
+            <h1 className="underline text-center text-2xl font-bold">
+              ENVIO DE DOCUMENTOS
+            </h1>
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Envie uma foto sua atual <span className="text-red-500">*</span>
               </h2>
               <input
-                className="bg-zinc-200"
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
                 type="file"
                 id="selfie"
                 name="selfie"
@@ -337,12 +368,12 @@ export default function Page() {
             </div>
             {/* Foto com RG */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Envie uma foto segurando o documento (RG/CNH) ao lado do rosto{' '}
                 <span className="text-red-500">*</span>
               </h2>
               <input
-                className="bg-zinc-200"
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
                 type="file"
                 id="selfie-documento"
                 name="selfie-documento"
@@ -352,9 +383,11 @@ export default function Page() {
             </div>
             {/* Foto do Ajudante */}
             <div className="question">
-              <h2>Envie uma foto atual do seu ajudante (opcional)</h2>
+              <h2 className="font-bold">
+                Envie uma foto atual do seu ajudante (opcional)
+              </h2>
               <input
-                className="bg-zinc-200"
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
                 type="file"
                 id="selfie-ajudante"
                 name="selfie-ajudante"
@@ -363,12 +396,12 @@ export default function Page() {
             </div>
             {/* Foto do comprovante de trabalho */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Envie uma foto folha da carteira profissional que comprove sua
                 profissão <span className="text-red-500">*</span>
               </h2>
               <input
-                className="bg-zinc-200"
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
                 type="file"
                 id="comprovante-trabalho"
                 name="comprovante-trabalho"
@@ -378,12 +411,12 @@ export default function Page() {
             </div>
             {/* Foto do RG/CPF */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Envie uma foto do seu RG com CPF{' '}
                 <span className="text-red-500">*</span>
               </h2>
               <input
-                className="bg-zinc-200"
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
                 type="file"
                 id="foto-rg-cpf"
                 name="foto-rg-cpf"
@@ -393,12 +426,12 @@ export default function Page() {
             </div>
             {/* Foto do comprovante de residencia */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Envie uma foto do seu comprovante de residência{' '}
                 <span className="text-red-500">*</span>
               </h2>
               <input
-                className="bg-zinc-200"
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
                 type="file"
                 id="comprovante-residencia"
                 name="comprovante-residencia"
@@ -408,9 +441,9 @@ export default function Page() {
             </div>
             {/* Foto do certificado MEI */}
             <div className="question">
-              <h2>Certificado MEI (Caso tenha)</h2>
+              <h2 className="font-bold">Certificado MEI (Caso tenha)</h2>
               <input
-                className="bg-zinc-200"
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
                 type="file"
                 id="certificado-mei"
                 name="certificado-mei"
@@ -421,10 +454,12 @@ export default function Page() {
 
           {/* Step 5 */}
           <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100">
-            <h1>EXPERIÊNCIA PROFISSIONAL</h1>
+            <h1 className="underline text-center text-2xl font-bold">
+              EXPERIÊNCIA PROFISSIONAL
+            </h1>
             {/* Meio de transporte */}
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Qual meio de transporte você utiliza para ir ao cliente?{' '}
                 <span className="text-red-500">*</span>
               </h2>
@@ -467,7 +502,7 @@ export default function Page() {
               </fieldset>
             </div>
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Qual tipo de móvel você sabe montar?{' '}
                 <span className="text-red-500">*</span>
               </h2>
@@ -557,12 +592,13 @@ export default function Page() {
               </fieldset>
             </div>
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Quais cidades você atende?{' '}
                 <span className="text-red-500">*</span>
               </h2>
               <input
                 type="text"
+                className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                 name="cidades-atendidas"
                 id="cncidades-atendidaspj"
                 placeholder="Informe as cidades separando por vírgula"
@@ -570,12 +606,13 @@ export default function Page() {
               />
             </div>
             <div className="question">
-              <h2>
+              <h2 className="font-bold">
                 Atende em quais bairros? (ou todos){' '}
                 <span className="text-red-500">*</span>
               </h2>
               <input
                 type="text"
+                className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
                 name="cidades-atendidas"
                 id="cidades-atendidas"
                 placeholder="Informe os bairros separando por vírgula"
@@ -586,9 +623,11 @@ export default function Page() {
 
           {/* Step 6 */}
           <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100">
-            <h1>DADOS BANCÁRIOS</h1>
+            <h1 className="underline text-center text-2xl font-bold">
+              DADOS BANCÁRIOS
+            </h1>
             <div className="question">
-              <h2>Conta bancária</h2>
+              <h2 className="font-bold">Conta bancária</h2>
               <fieldset>
                 <div className="flex gap-1">
                   <input
@@ -621,15 +660,19 @@ export default function Page() {
                 </div>
               </fieldset>
             </div>
-            <h1>LEIA COM ATENÇÃO NOSSO CONTRATO DE PRESTAÇÃO DE SERVIÇO</h1>
+            <h1 className="underline text-center text-2xl font-bold">
+              LEIA COM ATENÇÃO NOSSO CONTRATO DE PRESTAÇÃO DE SERVIÇO
+            </h1>
             <div className="question">
-              <a
-                href=""
-                className="mb-4 flex justify-center items-center align-middle border-2 border-solid border-orange-400 rounded-lg bg-orange-300 hover:bg-orange-400"
-              >
-                <Scroll size={64} />
-                <p>VISUALIZAR CONTRATO</p>
-              </a>
+              <EmbedPDF>
+                <a
+                  href="https://fad6uwu6.simplepdf.eu/form/44c563317be0fe8745faa2938a91048e1cda43cf27d601f72da5ed0253754e67"
+                  className="mb-4 flex justify-center items-center align-middle border-2 border-solid border-orange-400 rounded-lg bg-orange-300 hover:bg-orange-400 font-bold"
+                >
+                  <Files size={64} weight="light" />
+                  VISUALIZAR CONTRATO
+                </a>
+              </EmbedPDF>
               <fieldset>
                 <div className="flex gap-1">
                   <input
@@ -655,8 +698,8 @@ export default function Page() {
         </form>
       </div>
       <div className="footer flex flex-col justify-center w-full bg-zinc-100 text-center p-5">
-        <h2>Tv. Santa Maria, 47 - Ananindeua/PA</h2>
-        <h2>
+        <h2 className="font-bold">Tv. Santa Maria, 47 - Ananindeua/PA</h2>
+        <h2 className="font-bold">
           UltraLog Logistica LTDA | 50.652.391/0001-05 | © 2024 – Todos os
           Direitos Reservados
         </h2>

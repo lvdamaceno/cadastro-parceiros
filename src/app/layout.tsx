@@ -1,6 +1,5 @@
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
-import Head from 'next/head';
 import './globals.css';
 
 import { Roboto } from 'next/font/google';
