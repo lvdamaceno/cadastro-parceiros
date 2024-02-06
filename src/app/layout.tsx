@@ -1,9 +1,8 @@
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import Head from 'next/head';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
 import { Roboto } from 'next/font/google';
 
 const roboto = Roboto({
@@ -30,6 +29,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
+      <Head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </Head>
       <body className={roboto.className}>
         {children} <Analytics />
       </body>

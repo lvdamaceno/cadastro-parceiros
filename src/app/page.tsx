@@ -1,4 +1,4 @@
-import { Scroll, Nut, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
+import { Scroll, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
 import Image from 'next/image';
 import logo from '/src/app/logo.png';
 
