@@ -4,7 +4,7 @@ import logo from '/src/app/logo.png';
 
 export default function Page() {
   return (
-    <div className="questions w-full my-5">
+    <div className="questions w-full mt-5">
       <div className="topbar flex justify-center w-full">
         <Image src={logo} alt="Logotipo da Ultralog" height={96} />
       </div>
@@ -652,6 +652,13 @@ export default function Page() {
             </button>
           </section>
         </form>
+      </div>
+      <div className="footer flex flex-col justify-center w-full bg-zinc-100 text-center p-5">
+        <h2>Tv. Santa Maria, 47 - Ananindeua/PA</h2>
+        <h2>
+          UltraLog Logistica LTDA | 50.652.391/0001-05 | © 2024 – Todos os
+          Direitos Reservados
+        </h2>
       </div>
     </div>
   );
