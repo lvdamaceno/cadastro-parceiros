@@ -699,7 +699,7 @@ export default function Page() {
                   <SignatureCanvas
                     penColor="black"
                     canvasProps={{
-                      width: 760,
+                      width: 550,
                       height: 200,
                       className: 'sigCanvas',
                     }}
