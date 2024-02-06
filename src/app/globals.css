@@ -6,7 +6,7 @@ body {
   display: flex;
   justify-content: center;
   /* background-color: #f85014; */
-  background-image: linear-gradient(180deg, #f85014, #ff7847);
+  background-image: linear-gradient(180deg, #f85014, rgb(251 146 60));
 }
 
 h1 {

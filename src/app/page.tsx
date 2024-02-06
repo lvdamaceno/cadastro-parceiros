@@ -646,8 +646,8 @@ export default function Page() {
           </section>
 
           {/* Enviar */}
-          <section className="flex justify-end">
-            <button className="p-3 border-2 border-orange-400 rounded-lg bg-orange-300 hover:bg-orange-400">
+          <section className="flex border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100">
+            <button className="flex-1 p-3 border-2 border-orange-400 rounded-lg bg-orange-300 hover:bg-orange-400">
               Finalizar credenciamento
             </button>
           </section>
