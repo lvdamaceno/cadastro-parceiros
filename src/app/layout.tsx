@@ -15,10 +15,10 @@ export const metadata: Metadata = {
   description: 'Página de cadastro de parceiros da Ultralog',
   openGraph: {
     siteName: 'Cadastro de Parceiros Ultralog',
-    images: '/src/app/logo.png',
+    images: '/logo.png',
   },
   icons: {
-    icon: '/src/app/logo.png',
+    icon: '/logo.png',
   },
 };
 
@@ -33,6 +33,7 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
       <body className={roboto.className}>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
         {children} <Analytics />
       </body>
     </html>
