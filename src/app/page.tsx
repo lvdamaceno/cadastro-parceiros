@@ -661,7 +661,7 @@ export default function Page() {
           Direitos Reservados
         </h2>
       </div>
-      <div className="contact fixed top-2 right-2">
+      <div className="contact absolute top-5 right-5">
         <a href="https://wa.me/559132224751">
           <WhatsappLogo size={48} />
         </a>
