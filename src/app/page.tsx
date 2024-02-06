@@ -111,6 +111,7 @@ export default function Page() {
                 name="sobrenome"
                 id="sobrenome"
                 placeholder="Informe seu sobrenome"
+                required
               />
             </div>
           </div>
@@ -249,7 +250,7 @@ export default function Page() {
             </div>
             <div className="flex justify-between gap-5">
               <input
-                type="text"
+                type="number"
                 name="cep"
                 id="cep"
                 placeholder="CEP"
@@ -276,14 +277,6 @@ export default function Page() {
                 id="mail"
                 placeholder="Informe o seu email de contato"
                 required
-              />
-            </div>
-            <div className="flex justify-between">
-              <input
-                type="text"
-                name="endereco-secundário"
-                id="endereco-secundário"
-                placeholder="Endereço secundário"
               />
             </div>
           </div>
@@ -326,6 +319,7 @@ export default function Page() {
               id="selfie"
               name="selfie"
               accept="image/*"
+              required
             />
           </div>
           {/* Foto com RG */}
@@ -340,6 +334,7 @@ export default function Page() {
               id="selfie-documento"
               name="selfie-documento"
               accept="image/*"
+              required
             />
           </div>
           {/* Foto do Ajudante */}
@@ -365,6 +360,7 @@ export default function Page() {
               id="comprovante-trabalho"
               name="comprovante-trabalho"
               accept="image/*"
+              required
             />
           </div>
           {/* Foto do RG/CPF */}
@@ -379,6 +375,7 @@ export default function Page() {
               id="foto-rg-cpf"
               name="foto-rg-cpf"
               accept="image/*"
+              required
             />
           </div>
           {/* Foto do comprovante de residencia */}
@@ -393,6 +390,7 @@ export default function Page() {
               id="comprovante-residencia"
               name="comprovante-residencia"
               accept="image/*"
+              required
             />
           </div>
           {/* Foto do certificado MEI */}
@@ -538,7 +536,7 @@ export default function Page() {
               Quais cidades você atende? <span className="text-red-500">*</span>
             </h2>
             <input
-              type="number"
+              type="text"
               name="cidades-atendidas"
               id="cncidades-atendidaspj"
               placeholder="Informe as cidades separando por vírgula"
@@ -551,7 +549,7 @@ export default function Page() {
               <span className="text-red-500">*</span>
             </h2>
             <input
-              type="number"
+              type="text"
               name="cidades-atendidas"
               id="cidades-atendidas"
               placeholder="Informe os bairros separando por vírgula"
@@ -578,12 +576,7 @@ export default function Page() {
                 </label>
               </div>
               <div className="flex gap-1">
-                <input
-                  type="checkbox"
-                  id="chave-pix"
-                  name="dados-bancarios"
-                  required
-                />
+                <input type="checkbox" id="chave-pix" name="dados-bancarios" />
                 <label htmlFor="chave-pix">Tenho chave pix</label>
               </div>
               <div className="flex gap-1">
@@ -591,7 +584,6 @@ export default function Page() {
                   type="checkbox"
                   id="chave-pix-terceiro"
                   name="dados-bancarios"
-                  required
                 />
                 <label htmlFor="chave-pix-terceiro">
                   Tenho chave pix em nome de terceiros
@@ -599,7 +591,7 @@ export default function Page() {
               </div>
             </fieldset>
           </div>
-          <h1>LEIA COM ATENÇÃO NOSSO CONTRATO DE PRESTÇÃO DE SERVIÇO</h1>
+          <h1>LEIA COM ATENÇÃO NOSSO CONTRATO DE PRESTAÇÃO DE SERVIÇO</h1>
           <div className="question">
             <a
               href=""
