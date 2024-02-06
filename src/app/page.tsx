@@ -1,4 +1,4 @@
-import { Scroll, Nut } from '@phosphor-icons/react/dist/ssr';
+import { Scroll, Nut, WhatsappLogo } from '@phosphor-icons/react/dist/ssr';
 import Image from 'next/image';
 import logo from '/src/app/logo.png';
 
@@ -660,6 +660,11 @@ export default function Page() {
           UltraLog Logistica LTDA | 50.652.391/0001-05 | © 2024 – Todos os
           Direitos Reservados
         </h2>
+      </div>
+      <div className="contact fixed bottom-5 right-5">
+        <a href="https://wa.me/559132224751">
+          <WhatsappLogo size={48} />
+        </a>
       </div>
       <p className="hidden">made by @lvdamaceno</p>
     </div>
