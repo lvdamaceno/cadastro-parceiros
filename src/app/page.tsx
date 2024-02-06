@@ -697,14 +697,14 @@ export default function Page() {
                   Assine digitalmente no quadro abaixo
                 </h2>
                 <div className="border-2 border-orange-400 rounded-lg  bg-orange-300 flex justify-center items-center">
-                  {/* <SignatureCanvas
+                  <SignatureCanvas
                     penColor="black"
                     canvasProps={{
-                      width: 400,
+                      width: 300,
                       height: 200,
                       className: 'sigCanvas',
                     }}
-                  /> */}
+                  />
                 </div>
               </div>
             </div>
