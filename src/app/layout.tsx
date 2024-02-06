@@ -12,8 +12,8 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: 'Seja um parceiro Contente',
-  description: 'Página de cadastro de parceiros da Casa Contente',
+  title: 'Seja um parceiro UltraLog',
+  description: 'Página de cadastro de parceiros da Ultralog',
 };
 
 export default function RootLayout({

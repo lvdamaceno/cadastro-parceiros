@@ -5,8 +5,9 @@ import logo from '/src/app/logo.png';
 export default function Page() {
   return (
     <div className="questions w-full mt-5">
-      <div className="topbar flex justify-center w-full">
+      <div className="topbar flex flex-col place-items-center justify-center w-full">
         <Image src={logo} alt="Logotipo da Ultralog" height={96} />
+        <h1>ULTRALOG - CADASTRO P/ PARCEIROS DE MONTAGEM</h1>
       </div>
       <div className="max-w-3xl p-5 flex m-auto">
         <form action="" className="flex flex-col gap-5 ">
