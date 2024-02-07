@@ -107,10 +107,8 @@ export default function Page() {
                   </label>
                 </div>
                 <div className="flex gap-1">
-                  <input type="radio" name="vinculo" id="freelancer" />
-                  <label htmlFor="freelancer">
-                    FREELANCER - Profissional Autônomo
-                  </label>
+                  <input type="radio" name="vinculo" id="me" />
+                  <label htmlFor="me">ME - Micro Empresa</label>
                 </div>
               </div>
             </div>
