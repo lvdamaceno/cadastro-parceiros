@@ -13,15 +13,17 @@ import SignatureCanvas from 'react-signature-canvas';
 export default function montador() {
   return (
     <div className="questions w-full bg-gradient-to-b from-[#f85014] to-[#fb923c]">
-      <div className="topbar flex flex-col place-items-center justify-center w-full">
+      <div className="topbar flex flex-col place-items-center justify-center w-full bg-zinc-100 p-5">
         <a href="/">
           <Image src={logo} alt="Logotipo da Ultralog" height={96} />
         </a>
-        <h1 className="underline text-center text-2xl font-bold ">
-          ULTRALOG - CADASTRO P/ PARCEIROS DE MONTAGEM
-        </h1>
       </div>
-      <div className="max-w-4xl p-5 flex m-auto">
+      <div className="max-w-4xl p-5 flex flex-col gap-5 m-auto">
+        <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5 bg-zinc-100 drop-shadow-lg">
+          <h1 className="underline text-center text-2xl font-bold ">
+            ULTRALOG - CADASTRO P/ PARCEIROS DE MONTAGEM
+          </h1>
+        </section>
         <form action="" className="flex flex-col gap-5 ">
           {/* DADOS INICIAIS */}
           <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5 bg-zinc-100 drop-shadow-lg">
@@ -735,11 +737,11 @@ export default function montador() {
           Direitos Reservados
         </h2>
       </div>
-      <div className="contact absolute top-5 right-5">
+      {/* <div className="contact absolute top-5 right-5">
         <a href="https://wa.me/559132224751">
           <WhatsappLogo size={48} />
         </a>
-      </div>
+      </div> */}
       <p className="hidden">made by @lvdamaceno</p>
     </div>
   );
