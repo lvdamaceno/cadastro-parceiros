@@ -16,17 +16,50 @@ export default function Page() {
     <div className="questions w-full bg-gradient-to-b from-[#f85014] to-[#fb923c]">
       <div className="topbar flex flex-col place-items-center justify-center w-full">
         <Image src={logo} alt="Logotipo da Ultralog" height={96} />
-        <h1 className="underline text-center text-2xl font-bold">
+        <h1 className="underline text-center text-2xl font-bold ">
           ULTRALOG - CADASTRO P/ PARCEIROS DE MONTAGEM
         </h1>
       </div>
       <div className="max-w-3xl p-5 flex m-auto">
         <form action="" className="flex flex-col gap-5 ">
-          {/* Step 1 */}
-          <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5 bg-zinc-100">
+          {/* DADOS INICIAIS */}
+          <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5 bg-zinc-100 drop-shadow-lg">
             <h1 className="underline text-center text-2xl font-bold">
               DADOS INICIAIS
             </h1>
+            <div className="question">
+              <h2 className="font-bold text-justify">
+                E aí! Pra começar a se cadastrar, dá uma garantida que você tem
+                em mãos as fotos dos documentos a seguir para anexar, beleza?
+              </h2>
+              <ul className="list-disc ml-10">
+                <li>Uma selfie sua;</li>
+                <li>
+                  Uma foto sua segurando seu documento (RG ou CNH) bem pertinho
+                  do seu rosto;
+                </li>
+                <li>
+                  Uma foto do seu RG junto com o CPF, mostrando os dois lados;
+                </li>
+                <li>
+                  Uma foto da parte da sua carteira de trabalho que mostra qual
+                  é a sua profissão; e
+                </li>
+                <li>Uma foto do seu comprovante de endereço.</li>
+              </ul>
+
+              <div className="flex gap-1">
+                <input
+                  type="radio"
+                  name="documentos"
+                  id="documentos"
+                  required
+                />
+                <label htmlFor="documentos">
+                  Show! Já tenho tudo isso aqui.
+                </label>
+              </div>
+            </div>
             {/* Gênero */}
             <div className="question">
               <h2 className="font-bold">
@@ -64,36 +97,7 @@ export default function Page() {
               </div>
             </div>
             {/* Documentos */}
-            <div className="question">
-              <h2 className="font-bold">
-                OBRIGATÓRIO. Antes de começar o seu credenciamento, providencie
-                as fotos dos seguintes documentos abaixo para serem anexados:{' '}
-                <span className="text-red-500">*</span>
-              </h2>
 
-              <ul className="list-disc ml-10">
-                <li>Foto sua atual;</li>
-                <li>Foto segurando o documento (RH/CNH) ao lado do rosto;</li>
-                <li>Foto do RG com o CPF (frente e verso);</li>
-                <li>
-                  Foto da folha da carteira profissional que comprove sua
-                  profisão e
-                </li>
-                <li>Foto do comprovante de residência.</li>
-              </ul>
-
-              <div className="flex gap-1">
-                <input
-                  type="radio"
-                  name="documentos"
-                  id="documentos"
-                  required
-                />
-                <label htmlFor="documentos">
-                  Sim! Já tenho todos os itens acima
-                </label>
-              </div>
-            </div>
             {/* Vínculo */}
             <div className="question">
               <h2 className="font-bold">
@@ -114,8 +118,113 @@ export default function Page() {
             </div>
           </section>
 
-          {/* Step 2 */}
-          <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100">
+          {/* ENVIO DE DOCUMENTOS */}
+          <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100 drop-shadow-lg">
+            {/* Selfie */}
+            <h1 className="underline text-center text-2xl font-bold">
+              ENVIO DE DOCUMENTOS
+            </h1>
+            <div className="question">
+              <h2 className="font-bold">
+                Envie uma foto sua atual <span className="text-red-500">*</span>
+              </h2>
+              <input
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
+                type="file"
+                id="selfie"
+                name="selfie"
+                accept="image/*"
+                required
+              />
+            </div>
+            {/* Foto com RG */}
+            <div className="question">
+              <h2 className="font-bold">
+                Envie uma foto segurando o documento (RG/CNH) ao lado do rosto{' '}
+                <span className="text-red-500">*</span>
+              </h2>
+              <input
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
+                type="file"
+                id="selfie-documento"
+                name="selfie-documento"
+                accept="image/*"
+                required
+              />
+            </div>
+            {/* Foto do Ajudante */}
+            <div className="question">
+              <h2 className="font-bold">
+                Envie uma foto atual do seu ajudante (opcional)
+              </h2>
+              <input
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
+                type="file"
+                id="selfie-ajudante"
+                name="selfie-ajudante"
+                accept="image/*"
+              />
+            </div>
+            {/* Foto do comprovante de trabalho */}
+            <div className="question">
+              <h2 className="font-bold">
+                Envie uma foto folha da carteira profissional que comprove sua
+                profissão <span className="text-red-500">*</span>
+              </h2>
+              <input
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
+                type="file"
+                id="comprovante-trabalho"
+                name="comprovante-trabalho"
+                accept="image/*"
+                required
+              />
+            </div>
+            {/* Foto do RG/CPF */}
+            <div className="question">
+              <h2 className="font-bold">
+                Envie uma foto do seu RG com CPF{' '}
+                <span className="text-red-500">*</span>
+              </h2>
+              <input
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
+                type="file"
+                id="foto-rg-cpf"
+                name="foto-rg-cpf"
+                accept="image/*"
+                required
+              />
+            </div>
+            {/* Foto do comprovante de residencia */}
+            <div className="question">
+              <h2 className="font-bold">
+                Envie uma foto do seu comprovante de residência{' '}
+                <span className="text-red-500">*</span>
+              </h2>
+              <input
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
+                type="file"
+                id="comprovante-residencia"
+                name="comprovante-residencia"
+                accept="image/*"
+                required
+              />
+            </div>
+            {/* Foto do certificado MEI */}
+            <div className="question">
+              <h2 className="font-bold">Certificado MEI (Caso tenha)</h2>
+              <input
+                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
+                type="file"
+                id="certificado-mei"
+                name="certificado-mei"
+                accept="image/*"
+              />
+            </div>
+          </section>
+
+          {/* IDENTIFICACAO */}
+          <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100 drop-shadow-lg">
             {/* Nome */}
             <h1 className="underline text-center text-2xl font-bold">
               IDENTIFICAÇÃO
@@ -241,8 +350,8 @@ export default function Page() {
             </div>
           </section>
 
-          {/* Step 3 */}
-          <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100">
+          {/* DADOS PARA CONTATO */}
+          <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100 drop-shadow-lg">
             <h1 className="underline text-center text-2xl font-bold">
               DADOS PARA CONTATO
             </h1>
@@ -350,120 +459,16 @@ export default function Page() {
             </div>
           </section>
 
-          {/* Step 4 */}
-          <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100">
-            {/* Selfie */}
-            <h1 className="underline text-center text-2xl font-bold">
-              ENVIO DE DOCUMENTOS
-            </h1>
-            <div className="question">
-              <h2 className="font-bold">
-                Envie uma foto sua atual <span className="text-red-500">*</span>
-              </h2>
-              <input
-                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
-                type="file"
-                id="selfie"
-                name="selfie"
-                accept="image/*"
-                required
-              />
-            </div>
-            {/* Foto com RG */}
-            <div className="question">
-              <h2 className="font-bold">
-                Envie uma foto segurando o documento (RG/CNH) ao lado do rosto{' '}
-                <span className="text-red-500">*</span>
-              </h2>
-              <input
-                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
-                type="file"
-                id="selfie-documento"
-                name="selfie-documento"
-                accept="image/*"
-                required
-              />
-            </div>
-            {/* Foto do Ajudante */}
-            <div className="question">
-              <h2 className="font-bold">
-                Envie uma foto atual do seu ajudante (opcional)
-              </h2>
-              <input
-                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
-                type="file"
-                id="selfie-ajudante"
-                name="selfie-ajudante"
-                accept="image/*"
-              />
-            </div>
-            {/* Foto do comprovante de trabalho */}
-            <div className="question">
-              <h2 className="font-bold">
-                Envie uma foto folha da carteira profissional que comprove sua
-                profissão <span className="text-red-500">*</span>
-              </h2>
-              <input
-                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
-                type="file"
-                id="comprovante-trabalho"
-                name="comprovante-trabalho"
-                accept="image/*"
-                required
-              />
-            </div>
-            {/* Foto do RG/CPF */}
-            <div className="question">
-              <h2 className="font-bold">
-                Envie uma foto do seu RG com CPF{' '}
-                <span className="text-red-500">*</span>
-              </h2>
-              <input
-                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
-                type="file"
-                id="foto-rg-cpf"
-                name="foto-rg-cpf"
-                accept="image/*"
-                required
-              />
-            </div>
-            {/* Foto do comprovante de residencia */}
-            <div className="question">
-              <h2 className="font-bold">
-                Envie uma foto do seu comprovante de residência{' '}
-                <span className="text-red-500">*</span>
-              </h2>
-              <input
-                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
-                type="file"
-                id="comprovante-residencia"
-                name="comprovante-residencia"
-                accept="image/*"
-                required
-              />
-            </div>
-            {/* Foto do certificado MEI */}
-            <div className="question">
-              <h2 className="font-bold">Certificado MEI (Caso tenha)</h2>
-              <input
-                className="bg-zinc-200 w-full px-5 py-3 my-2  inline-block border border-dotted border-zinc-400 rounded-lg"
-                type="file"
-                id="certificado-mei"
-                name="certificado-mei"
-                accept="image/*"
-              />
-            </div>
-          </section>
-
-          {/* Step 5 */}
-          <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100">
+          {/* EXPERIENCIA PROFISSIONAL */}
+          <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100 drop-shadow-lg">
             <h1 className="underline text-center text-2xl font-bold">
               EXPERIÊNCIA PROFISSIONAL
             </h1>
             {/* Meio de transporte */}
             <div className="question">
               <h2 className="font-bold">
-                Qual meio de transporte você utiliza para ir ao cliente?{' '}
+                Como você costuma se deslocar até os seus clientes? Escolha
+                todas as opções que se aplicam:
                 <span className="text-red-500">*</span>
               </h2>
               <fieldset>
@@ -486,9 +491,7 @@ export default function Page() {
                     id="bicicleta-motorizada"
                     name="meio-transporte"
                   />
-                  <label htmlFor="bicicleta-motorizada">
-                    Bicicleta motorizada
-                  </label>
+                  <label htmlFor="bicicleta-motorizada">Scooter elétrico</label>
                 </div>
                 <div className="flex gap-1">
                   <input type="checkbox" id="carro" name="meio-transporte" />
@@ -506,7 +509,8 @@ export default function Page() {
             </div>
             <div className="question">
               <h2 className="font-bold">
-                Qual tipo de móvel você sabe montar?{' '}
+                Quais tipos de móveis você manja montar? Marque todas as opções
+                que se aplicam:
                 <span className="text-red-500">*</span>
               </h2>
               <fieldset>
@@ -518,7 +522,7 @@ export default function Page() {
                     required
                   />
                   <label htmlFor="planejato">
-                    Planejado (Necessita recorte)
+                    Sob medida (Precisa de ajuste na hora)
                   </label>
                 </div>
                 <div className="flex gap-1">
@@ -527,7 +531,7 @@ export default function Page() {
                     id="modulado"
                     name="moveis-conhecidos"
                   />
-                  <label htmlFor="modulado">Modulado</label>
+                  <label htmlFor="modulado">Modulares</label>
                 </div>
                 <div className="flex gap-1">
                   <input
@@ -535,7 +539,7 @@ export default function Page() {
                     id="convencional"
                     name="moveis-conhecidos"
                   />
-                  <label htmlFor="convencional">Convencional</label>
+                  <label htmlFor="convencional">Tradicionais</label>
                 </div>
                 <div className="flex gap-1">
                   <input
@@ -543,9 +547,7 @@ export default function Page() {
                     id="moveis-escritorio"
                     name="moveis-conhecidos"
                   />
-                  <label htmlFor="moveis-escritorio">
-                    Móveis de escritório
-                  </label>
+                  <label htmlFor="moveis-escritorio">Para escritório</label>
                 </div>
                 <div className="flex gap-1">
                   <input
@@ -555,14 +557,21 @@ export default function Page() {
                   />
                   <label htmlFor="estofados">Estofados</label>
                 </div>
-
+              </fieldset>
+            </div>
+            <div className="question">
+              <h2 className="font-bold">
+                E aí, tem habilidade em quê mais?
+                <span className="text-red-500">*</span>
+              </h2>
+              <fieldset>
                 <div className="flex gap-1">
                   <input
                     type="checkbox"
                     id="chaveiro"
                     name="moveis-conhecidos"
                   />
-                  <label htmlFor="chaveiro">Chaveiro</label>
+                  <label htmlFor="chaveiro">Fazer chave (Chaveiro)</label>
                 </div>
                 <div className="flex gap-1">
                   <input
@@ -570,7 +579,7 @@ export default function Page() {
                     id="higienizacao"
                     name="moveis-conhecidos"
                   />
-                  <label htmlFor="higienizacao">Higienização</label>
+                  <label htmlFor="higienizacao">Limpeza (Higienização)</label>
                 </div>
                 <div className="flex gap-1">
                   <input
@@ -624,8 +633,8 @@ export default function Page() {
             </div>
           </section>
 
-          {/* Step 6 */}
-          <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100">
+          {/* DADOS BANCARIOS */}
+          <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100 drop-shadow-lg">
             <h1 className="underline text-center text-2xl font-bold">
               DADOS BANCÁRIOS
             </h1>
@@ -663,6 +672,10 @@ export default function Page() {
                 </div>
               </fieldset>
             </div>
+          </section>
+
+          {/* CONTRATO */}
+          <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100 drop-shadow-lg">
             <h1 className="underline text-center text-2xl font-bold">
               LEIA COM ATENÇÃO NOSSO CONTRATO DE PRESTAÇÃO DE SERVIÇO
             </h1>
@@ -709,9 +722,9 @@ export default function Page() {
           </section>
 
           {/* Enviar */}
-          <section className="flex border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100">
-            <button className="flex-1 p-3 border-2 border-orange-400 rounded-lg bg-orange-300 hover:bg-orange-400">
-              Finalizar credenciamento
+          <section className="flex border-solid border border-zinc-300 rounded-lg p-5  bg-zinc-100 drop-shadow-lg">
+            <button className="flex-1 p-3 border-2 border-orange-400 rounded-lg bg-orange-300 hover:bg-orange-400 drop-shadow-lg">
+              Finalizar seu credenciamento
             </button>
           </section>
         </form>
