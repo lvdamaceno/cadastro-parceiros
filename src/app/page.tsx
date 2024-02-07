@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import logo from '/src/app/assets/logo-grande-bg.png';
-import happy from '/src/app/assets/happy.png';
-import wood from '/src/app/assets/wood-working.png';
+import tuco from '/src/app/assets/tuco.png';
+import working from '/src/app/assets/tuco-work.jpeg';
 
 export default function page() {
   return (
@@ -29,7 +29,7 @@ export default function page() {
         <section className="max-w-4xl m-auto w-full flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5 bg-zinc-100 drop-shadow-lg">
           <div className="presentation flex flex-col gap-5 items-center md:flex-row">
             <div className="logo">
-              <Image src={happy} alt="Logotipo da Ultralog" />
+              <Image src={tuco} width={850} alt="Logotipo da Ultralog" />
             </div>
             <div className="text w-full">
               <h1 className="text-left text-2xl font-bold mb-5">
@@ -103,8 +103,8 @@ export default function page() {
                 </ul>
               </div>
             </div>
-            <div className="logo">
-              <Image src={wood} width={500} alt="Logotipo da Ultralog" />
+            <div className="logo rounded-lg overflow-hidden">
+              <Image src={working} width={850} alt="Logotipo da Ultralog" />
             </div>
           </div>
           <div className="buttons flex flex-col gap-5 md:flex-row">
