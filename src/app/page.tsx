@@ -1,17 +1,16 @@
+import Header from './components/sections/Header';
+import Footer from './components/sections/Footer';
+
 import Image from 'next/image';
-import logo from '/src/app/assets/logo-grande-bg.png';
+
 import tuco from '/src/app/assets/tuco.png';
 import working from '/src/app/assets/tuco-work.jpeg';
+import Servicos from './components/buttons/Servicos';
 
 export default function page() {
   return (
     <div className="questions  w-full bg-gradient-to-b from-[#f85014] to-[#fb923c]">
-      {/* header */}
-      <div className="header flex flex-col items-center w-full bg-zinc-100 p-5">
-        <a href="/">
-          <Image src={logo} alt="Logotipo da Ultralog" height={96} />
-        </a>
-      </div>
+      <Header />
       <div className="max-w-4xl p-5 flex flex-col gap-5 m-auto">
         {/* title */}
         <section className=" m-auto w-full flex flex-col border-solid border border-zinc-300 rounded-lg p-5 bg-zinc-100 drop-shadow-lg ">
@@ -60,20 +59,7 @@ export default function page() {
               </div>
             </div>
           </div>
-          <div className="buttons flex flex-col gap-5 md:flex-row">
-            <a
-              href="/montador"
-              className="flex-1 p-3 border-2 border-orange-400 rounded-lg bg-orange-300 hover:bg-orange-400 drop-shadow-lg text-center"
-            >
-              Seja um Montador
-            </a>
-            <a
-              href="/entregador"
-              className="flex-1 p-3 border-2 border-orange-400 rounded-lg bg-orange-300 hover:bg-orange-400 drop-shadow-lg text-center"
-            >
-              Seja um Entregador
-            </a>
-          </div>
+          <Servicos />
         </section>
         {/* mid section */}
         <section className="max-w-4xl m-auto w-full flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5 bg-zinc-100 drop-shadow-lg">
@@ -107,31 +93,12 @@ export default function page() {
               <Image src={working} width={850} alt="Logotipo da Ultralog" />
             </div>
           </div>
-          <div className="buttons flex flex-col gap-5 md:flex-row">
-            <a
-              href="/montador"
-              className="flex-1 p-3 border-2 border-orange-400 rounded-lg bg-orange-300 hover:bg-orange-400 drop-shadow-lg text-center"
-            >
-              Seja um Montador
-            </a>
-            <a
-              href="/entregador"
-              className="flex-1 p-3 border-2 border-orange-400 rounded-lg bg-orange-300 hover:bg-orange-400 drop-shadow-lg text-center"
-            >
-              Seja um Entregador
-            </a>
-          </div>
+          <Servicos />
         </section>
       </div>
 
       {/* footer */}
-      <div className="footer flex flex-col justify-center w-full bg-zinc-100 text-center p-5">
-        <h2 className="font-bold">Tv. Santa Maria, 47 - Ananindeua/PA</h2>
-        <h2 className="font-bold">
-          UltraLog Logistica LTDA | 50.652.391/0001-05 | © 2024 – Todos os
-          Direitos Reservados
-        </h2>
-      </div>
+      <Footer />
     </div>
   );
 }
