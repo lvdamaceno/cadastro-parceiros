@@ -21,7 +21,7 @@ export default function montador() {
           ULTRALOG - CADASTRO P/ PARCEIROS DE MONTAGEM
         </h1>
       </div>
-      <div className="max-w-3xl p-5 flex m-auto">
+      <div className="max-w-4xl p-5 flex m-auto">
         <form action="" className="flex flex-col gap-5 ">
           {/* DADOS INICIAIS */}
           <section className="flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5 bg-zinc-100 drop-shadow-lg">
@@ -234,7 +234,7 @@ export default function montador() {
               <h2 className="font-bold">
                 Seu nome <span className="text-red-500">*</span>
               </h2>
-              <div className="flex justify-between gap-5">
+              <div className="flex flex-col md:flex-row justify-between gap-5">
                 <input
                   type="text"
                   className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
@@ -380,10 +380,10 @@ export default function montador() {
                   placeholder="Endereço secundário"
                 />
               </div>
-              <div className="flex justify-between gap-5">
+              <div className="flex flex-col justify-between md:flex-row md:gap-5">
                 <input
                   type="text"
-                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
+                  className="w-full px-5 py-3 my-2 inline-block border border-solid border-zinc-200 rounded-lg"
                   name="cidade"
                   id="cidade"
                   placeholder="Cidade"
@@ -391,14 +391,14 @@ export default function montador() {
                 />
                 <input
                   type="text"
-                  className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
+                  className="w-full px-5 py-3 my-2 inline-block border border-solid border-zinc-200 rounded-lg"
                   name="estado"
                   id="estado"
                   placeholder="Estado"
                   required
                 />
               </div>
-              <div className="flex justify-between gap-5">
+              <div className="flex flex-col justify-between md:flex-row md:gap-5">
                 <input
                   type="number"
                   className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
@@ -438,7 +438,7 @@ export default function montador() {
               <h2 className="font-bold">
                 Telefones <span className="text-red-500">*</span>
               </h2>
-              <div className="flex justify-between">
+              <div className="flex flex-col justify-between md:flex-row md:gap-5">
                 <input
                   type="number"
                   className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"
@@ -447,8 +447,6 @@ export default function montador() {
                   placeholder="Informe o seu contato principal (apenas números)"
                   required
                 />
-              </div>
-              <div className="flex justify-between">
                 <input
                   type="number"
                   className="w-full px-5 py-3 my-2  inline-block border border-solid border-zinc-200 rounded-lg"

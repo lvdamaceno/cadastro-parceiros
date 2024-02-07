@@ -3,21 +3,21 @@ import logo from '/src/app/assets/logo-grande-bg.png';
 
 export default function page() {
   return (
-    <div className="questions h-full bg-gradient-to-b from-[#f85014] to-[#fb923c] flex flex-col flex-wrap content-between justify-between">
+    <div className="questions w-full h-full bg-gradient-to-b from-[#f85014] to-[#fb923c] flex flex-col ">
       {/* header */}
       <div className="header justify-center w-full bg-zinc-100 p-5">
-        <div>
+        <div className="flex flex-col gap-5">
           <h2 className="text-center text-3xl md:text-5xl font-bold leading-snug">
             Quer prestar serviços para a UltraLog?
           </h2>
           <h1 className="text-center font-light">
             Seja um entregador parceiro e ajude a crescer e melhorar a logística
-            mais rápida do Brasil!
+            mais rápida do norte do Brasil!
           </h1>
         </div>
       </div>
       {/* mid section */}
-      <div className="max-w-3xl p-5 gap-5 m-auto">
+      <div className="max-w-4xl p-5 gap-5 m-auto">
         <div className="flex flex-col gap-5">
           <section className="w-full flex flex-col gap-5 border-solid border border-zinc-300 rounded-lg p-5 bg-zinc-100 drop-shadow-lg">
             <div className="presentation flex flex-col gap-5 items-center md:flex-row">
@@ -32,14 +32,14 @@ export default function page() {
                   <p>
                     Sendo um parceiro você consegue ganhar dinheiro fazendo
                     entregas, ter uma rotina de trabalho flexível além de
-                    usufruir de benefícios do ecossistema Magalu.
+                    usufruir de benefícios do ecossistema UltraLog.
                   </p>
                   <p>
                     Neste site você consegue fazer um cadastro inicial onde
                     nosso time tomará conhecimento da localidade que você deseja
                     atender além do veículo que possui e com isso conseguiremos
                     definir qual a melhor modalidade de entrega dentro do
-                    ecossistema Magalu para o seu perfil para enfim entrar em
+                    ecossistema UltraLog para o seu perfil para enfim entrar em
                     contato com você e falar sobre os próximos passos!
                   </p>
                   <p>
@@ -78,8 +78,6 @@ export default function page() {
           Direitos Reservados
         </h2>
       </div>
-
-      <p className="hidden">made by @lvdamaceno</p>
     </div>
   );
 }
