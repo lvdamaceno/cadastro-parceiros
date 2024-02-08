@@ -7,7 +7,7 @@ export default function admin() {
   return (
     <div className="flex flex-col items-center">
       <Header />
-      <div className="container max-w-4xl">
+      <div className="container max-w-5xl">
         <div className="options flex justify-between align-bottom p-5 ">
           <div className="buttons flex gap-5">
             <div className="tipo flex gap-5 ">

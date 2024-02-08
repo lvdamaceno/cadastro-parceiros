@@ -10,7 +10,7 @@ export default function ficha() {
     <div>
       <div className="flex flex-col items-center">
         <Header />
-        <div className="container max-w-4xl">
+        <div className="container max-w-5xl">
           <div className="ficha p-5 flex flex-col gap-5">
             <h2 className="font-bold text-2xl underline">DADOS CADASTRAIS</h2>
             <section>

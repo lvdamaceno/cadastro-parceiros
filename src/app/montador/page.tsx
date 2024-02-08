@@ -16,7 +16,7 @@ export default function montador() {
   return (
     <div className="questions w-full bg-gradient-to-b from-[#f85014] to-[#fb923c]">
       <Header />
-      <div className="max-w-4xl p-5 flex flex-col gap-5 m-auto">
+      <div className="max-w-5xl p-5 flex flex-col gap-5 m-auto">
         <Titulo title="ULTRALOG - CADASTRO P/ PARCEIROS DE MONTAGEM" />
         <form action="" className="flex flex-col gap-5 ">
           <DadosIniciais />
