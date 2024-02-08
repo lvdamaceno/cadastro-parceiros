@@ -12,7 +12,12 @@ export default function ficha() {
         <Header />
         <div className="container max-w-5xl">
           <div className="ficha p-5 flex flex-col gap-5">
-            <h2 className="font-bold text-2xl underline">DADOS CADASTRAIS</h2>
+            <div className="flex justify-between">
+              <h2 className="font-bold text-2xl underline">DADOS CADASTRAIS</h2>
+              <h2 className="font-bold text-2xl">
+                Status <span className="text-zinc-500 underline">pendente</span>
+              </h2>
+            </div>
             <section>
               <h3 className="font-bold text-2xl">Dados de Identificação</h3>
               <div className="flex flex-col gap-5 pb-5 border-b">
