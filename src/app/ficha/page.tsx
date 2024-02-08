@@ -15,7 +15,8 @@ export default function ficha() {
             <div className="flex justify-between">
               <h2 className="font-bold text-2xl underline">DADOS CADASTRAIS</h2>
               <h2 className="font-bold text-2xl">
-                Status <span className="text-zinc-500 underline">pendente</span>
+                Aprovação{' '}
+                <span className="text-zinc-500 underline">pendente</span>
               </h2>
             </div>
             <section>
