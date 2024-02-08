@@ -3,7 +3,9 @@ export default function Footer() {
     <div className="footer flex flex-col justify-center w-full bg-zinc-100 text-center p-5">
       <h2 className="font-bold">Tv. Santa Maria, 47 - Ananindeua/PA</h2>
       <h2 className="font-bold">
-        <a href="/admin">UltraLog </a>
+        <a href="/admin">
+          <span className="text-orange-600">UltraLog</span>{' '}
+        </a>
         Logistica LTDA | 50.652.391/0001-05 | © 2024 – Todos os Direitos
         Reservados
       </h2>

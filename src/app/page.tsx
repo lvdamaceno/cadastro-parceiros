@@ -16,7 +16,8 @@ export default function page() {
         <section className=" m-auto w-full flex flex-col border-solid border border-zinc-300 rounded-lg p-5 bg-zinc-100 drop-shadow-lg ">
           <div className="flex flex-col gap-5">
             <h2 className="text-center text-3xl md:text-5xl font-bold leading-snug">
-              Quer prestar serviços para a ultra.log.br?
+              Quer prestar serviços para a{' '}
+              <span className="text-orange-600">ultra.log.br</span>?
             </h2>
             <h1 className="text-center font-light">
               Seja um entregador parceiro e ajude a crescer e melhorar a
@@ -39,14 +40,17 @@ export default function page() {
               <h1 className="text-left text-2xl font-bold mb-2">Seja Ultra!</h1>
               <div className="question text-justify flex flex-col gap-2">
                 <p>
-                  Junte-se a nós como parceiro ultra.log.br e descubra uma forma
-                  dinâmica de ganhar dinheiro, optando por fazer entregas ou
-                  realizar serviços de montagem de móveis. Com a ultra.log.br,
-                  você tem a liberdade de escolher o caminho que mais se alinha
-                  às suas habilidades e preferências. Desfrute de uma rotina de
+                  Junte-se a nós como parceiro{' '}
+                  <span className="text-orange-600">ultra.log.br</span> e
+                  descubra uma forma dinâmica de ganhar dinheiro, optando por
+                  fazer entregas ou realizar serviços de montagem de móveis. Com
+                  a <span className="text-orange-600">ultra.log.br</span>, você
+                  tem a liberdade de escolher o caminho que mais se alinha às
+                  suas habilidades e preferências. Desfrute de uma rotina de
                   trabalho flexível e acesso aos benefícios do nosso ecossistema
-                  ultra.log.br, tudo isso enquanto atende às necessidades dos
-                  nossos clientes de forma eficaz e profissional.
+                  <span className="text-orange-600">ultra.log.br</span>, tudo
+                  isso enquanto atende às necessidades dos nossos clientes de
+                  forma eficaz e profissional.
                 </p>
                 <p>
                   Faça seu cadastro inicial em nosso site para que possamos
@@ -75,7 +79,8 @@ export default function page() {
               processo e entrar em contato o mais rápido possível.
             </p>
             <p>
-              Agradecemos por considerar a parceria com a ultra.log.br! Estamos
+              Agradecemos por considerar a parceria com a{' '}
+              <span className="text-orange-600">ultra.log.br</span>! Estamos
               empolgados com a possibilidade de contar com você em nossa equipe,
               oferecendo serviços de qualidade que atendam às expectativas dos
               nossos clientes e reforçando o compromisso com a eficiência e
@@ -89,7 +94,8 @@ export default function page() {
           <div className="presentation flex flex-col gap-2  md:flex-row">
             <div className="text w-full">
               <h1 className="text-left text-2xl font-bold mb-5">
-                O que é necessário para se tornar um parceiro ultra.log.br?
+                O que é necessário para se tornar um parceiro{' '}
+                <span className="text-orange-600">ultra.log.br</span>?
               </h1>
               <div className="question text-justify flex flex-col gap-2">
                 <ul className="text-justify list-disc ml-5">
