@@ -1,3 +1,4 @@
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import './globals.css';
@@ -34,7 +35,7 @@ export default function RootLayout({
       </head>
       <body className={roboto.className}>
         <link rel="icon" href="/favicon.ico" sizes="any" />
-        {children} <Analytics />
+        {children} <SpeedInsights /> <Analytics />
       </body>
     </html>
   );
