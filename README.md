@@ -1,3 +1,9 @@
+![alt text](src/app/assets/home.jpeg)
+
+![alt text](src/app/assets/admin.jpeg)
+
+![alt text](src/app/assets/ficha.jpeg)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
