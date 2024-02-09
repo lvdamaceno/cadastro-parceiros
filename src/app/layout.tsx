@@ -3,10 +3,15 @@ import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import './globals.css';
 
-import { Roboto } from 'next/font/google';
+import { Poppins, Roboto } from 'next/font/google';
 
 const roboto = Roboto({
   weight: ['400', '700'],
+  subsets: ['latin'],
+});
+
+const poppins = Poppins({
+  weight: ['400', '600', '700'],
   subsets: ['latin'],
 });
 
@@ -33,7 +38,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
       </head>
-      <body className={roboto.className}>
+      <body className={poppins.className}>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         {children} <SpeedInsights /> <Analytics />
       </body>
