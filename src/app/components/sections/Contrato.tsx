@@ -13,7 +13,8 @@ export default function Contrato() {
         <EmbedPDF>
           <a
             // href="https://fad6uwu6.simplepdf.eu/form/44c563317be0fe8745faa2938a91048e1cda43cf27d601f72da5ed0253754e67"
-            href="https://fad6uwu6.simplepdf.eu/form/fe13897991832b6baac4d7f918349bba6dd61b17f3ad4bf6aeb7b1e60a49ab41"
+            // href="https://fad6uwu6.simplepdf.eu/form/fe13897991832b6baac4d7f918349bba6dd61b17f3ad4bf6aeb7b1e60a49ab41"
+            href="https://fad6uwu6.simplepdf.com/form/c432d4cb-d888-4db4-a547-b9103ba51ae4"
             className="mb-4 flex justify-center items-center align-middle border-2 border-solid border-orange-400 rounded-lg bg-orange-300 hover:bg-orange-400 font-bold"
           >
             <Files size={64} weight="light" />
